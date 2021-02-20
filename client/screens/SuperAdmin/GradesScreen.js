@@ -4,9 +4,9 @@ import {
   Text,
   StyleSheet,
   TouchableHighlight,
-  FlatList,
   ActivityIndicator,
   Alert,
+  ScrollView,
 } from "react-native";
 import { Card } from "react-native-paper";
 import { gql, useQuery, useMutation } from "@apollo/client";
@@ -44,18 +44,17 @@ const GradesScreen = ({ navigation }) => {
   if (data) {
     const { grades } = data;
     return (
-      <View>
-        <TouchableHighlight
-          style={styles.touch}
-          activeOpacity={0.6}
-          underlayColor=""
-          onPress={() => navigation.navigate("SuperAdminAddGrade")}
-        >
-          <Text style={styles.touchText}>Agregar Grado</Text>
-        </TouchableHighlight>
-        <FlatList
-          data={grades}
-          renderItem={({ item: grade }) => {
+      <ScrollView>
+        <View>
+          <TouchableHighlight
+            style={styles.touch}
+            activeOpacity={0.6}
+            underlayColor=""
+            onPress={() => navigation.navigate("SuperAdminAddGrade")}
+          >
+            <Text style={styles.touchText}>Agregar Grado</Text>
+          </TouchableHighlight>
+          {grades.map((grade) => {
             return (
               <Card key={grade._id} style={styles.card}>
                 <View style={styles.cardIn}>
@@ -101,10 +100,9 @@ const GradesScreen = ({ navigation }) => {
                 </View>
               </Card>
             );
-          }}
-          keyExtractor={({ _id }) => _id}
-        />
-      </View>
+          })}
+        </View>
+      </ScrollView>
     );
   } else if (error)
     return (

@@ -194,9 +194,9 @@ const OptionsStudent = ({ navigation }) => {
                 Dirección: {`${student.address}`}
               </Text>
             </View>
-            <View style={[styles.input, styles.inputMateria]}>
+            {/* <View style={[styles.input, styles.inputMateria]}>
               <Text style={styles.touch}>Fecha: {`${student.birthday}`}</Text>
-            </View>
+            </View> */}
           </ScrollView>
         </View>
       </CenterView>

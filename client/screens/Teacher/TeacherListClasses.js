@@ -84,7 +84,7 @@ const TeacherListClasses = ({ navigation, route }) => {
               {classes.classes.map((clase, i) => {
                 return (
                   <View key={clase._id} style={styles.cardIn}>
-                    <Text style={{ fontSize: 18 }}>{clase.name}</Text>
+                    <Text style={{ fontSize: 18, minWidth: 90 }}>{clase.name}</Text>
                     <TouchableHighlight
                       style={styles.button}
                       activeOpacity={0.6}

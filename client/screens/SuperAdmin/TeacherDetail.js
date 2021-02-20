@@ -95,9 +95,9 @@ function TeacherDetail({ route }) {
               </Text>
             </View>
 
-            <View style={styles.input}>
+            {/* <View style={styles.input}>
               <Text style={styles.touch}>Fecha: {`${teacher.birthday}`}</Text>
-            </View>
+            </View> */}
             <View style={[styles.input, styles.inputMateria]}>
               <Text style={styles.touch}>
                 Materias:{" "}
@@ -105,7 +105,7 @@ function TeacherDetail({ route }) {
                   teacher.subjects.map((subject, i) => {
                     return (
                       <Text key={i} style={styles.description}>
-                        {subject.name}: {subject.course.name}
+                        {subject.name}: {subject.course.name},
                         {"  "}
                       </Text>
                     );

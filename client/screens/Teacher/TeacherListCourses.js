@@ -67,6 +67,9 @@ const TeacherListCourses = ({ navigation }) => {
         </View>
       );
     } else {
+      // const courses = data.teachers[0].map((cursos, i) => {
+      //   return cursos.subjects[i].course
+      // })
       const courses = data.teachers[0].subjects[0].course; 
 
       return (

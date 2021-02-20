@@ -151,7 +151,7 @@ const SuperAdminListTeachers = ({ navigation }) => {
                         />
                       </TouchableHighlight>
                     </View>
-                    <View style={styles.desc}>
+                    {/* <View style={styles.desc}>
                       {teacher.subjects?.length > 0 ? (
                         teacher.subjects.map((subject, i) => {
                           return (
@@ -164,7 +164,7 @@ const SuperAdminListTeachers = ({ navigation }) => {
                       ) : (
                         <></>
                       )}
-                    </View>
+                    </View> */}
                   </View>
                 </Card>
               );
@@ -226,6 +226,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   description: {
+    flex: 1,
+    flexWrap: "wrap",
     fontSize: 14,
     // fontFamily: "roboto",
     color: "#000000",

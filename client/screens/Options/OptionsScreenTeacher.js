@@ -112,7 +112,7 @@ const OptionsTeacher = ({ navigation, route }) => {
                       marginTop: 20,
                       alignSelf: "center",
                     }}
-                  />
+                    />
                 )}
               </TouchableHighlight>
             </View>
@@ -160,9 +160,9 @@ const OptionsTeacher = ({ navigation, route }) => {
               </Text>
             </View>
 
-            <View style={styles.input}>
+            {/* <View style={styles.input}>
               <Text style={styles.touch}>Fecha: {`${teacher.birthday}`}</Text>
-            </View>
+            </View> */}
             <View style={[styles.input, styles.inputMateria]}>
               <Text style={styles.touch}>
                 Materias:{" "}

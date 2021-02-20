@@ -85,7 +85,7 @@ const TeacherListModules = ({ navigation, route }) => {
               {modules.map((module, i) => {
                 return (
                   <View key={module._id} style={styles.cardIn}>
-                    <Text style={{ fontSize: 18 }}>{module.name}</Text>
+                    <Text style={{ fontSize: 18, minWidth: 80 }}>{module.name}</Text>
                     <TouchableHighlight
                       style={styles.button}
                       activeOpacity={0.6}

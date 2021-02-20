@@ -77,7 +77,7 @@ const TeacherListSubjects = ({ navigation }) => {
                     key={subject._id}
                     style={styles.cont}
                   >
-                    <Text style={{ fontSize: 18 }}>{subject.name}</Text>
+                    <Text style={{ fontSize: 18 , minWidth: 80}}>{subject.name}</Text>
                     <Text style={{ fontSize: 16 }}>{subject.course?.name}</Text>
                     <TouchableHighlight
                       style={styles.button}

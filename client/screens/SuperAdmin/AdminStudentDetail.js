@@ -80,15 +80,15 @@ function AdminStudentDetail({ route }) {
             <View style={styles.input}>
               <Text style={styles.touch}>DNI: {`${student.dni}`}</Text>
             </View>
-            <View style={styles.input}>
+            <View style={[styles.input, styles.inputMateria]}>
               <Text style={styles.touch}>
                 Dirección: {`${student.address}`}
               </Text>
             </View>
-
+{/* 
             <View style={[styles.input, styles.inputMateria]}>
               <Text style={styles.touch}>Fecha: {`${student.birthday}`}</Text>
-            </View>
+            </View> */}
           </ScrollView>
         </View>
       </CenterView>

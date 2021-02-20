@@ -93,7 +93,7 @@ const SuperAdminListSubjects = ({ navigation, route }) => {
               {subjects.map((subject, i) => {
                 return (
                   <View key={subject._id} style={styles.cards}>
-                    <Text style={{ fontSize: 18 }}>{subject.name}</Text>
+                    <Text style={{ fontSize: 18, minWidth: 95 }}>{subject.name}</Text>
                     {subject.teacher ? (
                       <TouchableHighlight
                         style={styles.buttonDel}

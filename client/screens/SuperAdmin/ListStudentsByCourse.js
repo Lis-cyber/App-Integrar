@@ -109,7 +109,7 @@ const ListStudentsByCourse = ({ navigation, route }) => {
                 return (
                   <Card key={item._id} style={styles.card}>
                     <View style={styles.cardIn}>
-                      <Text style={styles.cardText}>
+                      <Text style={{minWidth: 95}}>
                         {item.name} {item.lastname}
                       </Text>
                       <Text style={styles.cardText}>

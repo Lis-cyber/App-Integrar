@@ -102,8 +102,8 @@ function StudentDetail({ route }) {
               {/* ------------------------------------------------- */}
               <View style={styles.inputScore}>
                 <Text style={styles.touchScore}>Unidad</Text>
-                <Text style={styles.touchScore}>%</Text>
-                <Text style={styles.touchScore}>Estado{"         "}</Text>
+                <Text style={styles.touchScore}>%{"         "}</Text>
+                <Text style={styles.touchScore}>Estado{" "}</Text>
               </View>
               {/* -------------------- Percentage ----------------------------- */}
 
@@ -136,8 +136,8 @@ function StudentDetail({ route }) {
                 return (
                   <View key={index} style={styles.inputScore}>
                     <Text style={styles.touchScore}>{unity.name}</Text>
-                    <Text style={styles.touchScore}>
-                      {isNaN(percentage) ? <>---</> : percentage + "%"}
+                    <Text style={styles.touchScoreP}>
+                      {isNaN(percentage) ? <>---{"             "}</> : percentage + "%"}
                     </Text>
                     {percentage === 100 ? (
                       <Text style={styles.touchScore}>Excelente</Text>
@@ -175,14 +175,14 @@ function StudentDetail({ route }) {
             <View style={styles.input}>
               <Text style={styles.touch}>DNI: {`${student.dni}`}</Text>
             </View>
-            <View style={styles.input}>
+            <View style={[styles.input, styles.inputMateria]}>
               <Text style={styles.touch}>
                 Dirección: {`${student.address}`}
               </Text>
             </View>
-            <View style={[styles.input, styles.inputMateria]}>
+            {/* <View style={[styles.input, styles.inputMateria]}>
               <Text style={styles.touch}>Fecha: {`${student.birthday}`}</Text>
-            </View>
+            </View> */}
           </ScrollView>
         </View>
       </CenterView>
@@ -293,6 +293,13 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   touchScore: {
+    minWidth: 60,
+    justifyContent: "flex-start",
+    marginVertical: 5,
+    marginHorizontal: 20,
+  },
+  touchScoreP: {
+    minWidth: 10,
     justifyContent: "flex-start",
     marginVertical: 5,
     marginHorizontal: 20,
